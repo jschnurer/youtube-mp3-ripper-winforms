@@ -42,7 +42,7 @@ namespace YoutubeMP3Ripper
             Process process;
             process = new Process();
             process.StartInfo.FileName = Path.Combine(Directory.GetCurrentDirectory(), "Lib", "youtube-dl.exe");
-            process.StartInfo.Arguments = "--extract-audio --audio-format mp3 " + txtYoutubeURL.Text;
+            process.StartInfo.Arguments = "-f bestaudio --extract-audio --audio-format mp3 " + txtYoutubeURL.Text;
             process.StartInfo.UseShellExecute = false;
             process.StartInfo.CreateNoWindow = true;
             process.StartInfo.RedirectStandardOutput = true;
